@@ -1,0 +1,40 @@
+.reg-form-container {
+	margin: 10% 25%;
+}
+.reg-form-field-half {
+	border: none;
+	width:200px;
+	height: 28px;
+	padding: 0;
+	margin:8px;
+	border-radius: 2px;
+}
+.reg-form {
+	width: 90%;
+}
+
+.reg-form-field-full {
+	border: none;
+	width:420px;
+	height: 28px;
+	padding: 0;
+	margin:8px;
+	border-radius: 2px;
+}
+hr {
+	width: 90%;
+	margin: 10px 0px;
+}
+.submit {
+	border: none;
+	background: none;
+	background: #3498db;
+	border-radius: 8px;
+	font-family: Arial;
+	color: #ffffff;
+	text-decoration: none;
+}
+.submit:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}

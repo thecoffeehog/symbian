@@ -1,0 +1,73 @@
+body {
+	background: url('../images/sitblur.png');
+	color:white;
+	font-family: 'Raleway', sans-serif;
+	text-shadow: 0.5px 0.5px 2px #000000;
+}	
+a {
+	color:white;
+	text-decoration: none;
+}
+#header-link {
+	text-decoration: none;
+}
+nav ul a:hover{
+	color:#cfcdcd;
+}
+nav ul a:active{
+	color:blue;
+}
+#header-logo {
+	float:left;
+	margin: 10px;
+}	
+.navbar ul {
+	text-align:right;
+}
+.navbar ul li {
+	display:inline-block;
+	margin:5px 10px 0px 10px;
+}
+.navbar ul div{
+	display:inline;
+	margin: 10px 0px 0px 10px;
+	
+}
+.navbar ul div .nav-dp-dropdown-btn {
+	width:32px; 
+	height:32px; 
+	border-radius:50%;
+	display: inline;
+	float: right;
+	margin-right: 4px;
+}
+
+.lead {
+	margin: 10% 25%;
+	width: 50%;
+	text-align: center;
+}
+.lead-heading {
+	font-size: 50px;
+}
+.lead-text {
+	font-size: 25px;
+	line-height: 1.4;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.lead-cta {
+	border: none;
+	background: none;
+	background: #3498db;
+	border-radius: 8px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+.lead-cta:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}

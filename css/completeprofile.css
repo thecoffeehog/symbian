@@ -1,0 +1,33 @@
+html, body {
+
+	text-align: center;
+    height: 100%;
+}
+.main {
+    height: 70%;
+    width: 100%;
+    display: table;	
+}
+.wrapper {
+    display: table-cell;
+    height: 70%;
+    vertical-align: middle;
+    a
+}
+input,select {
+	border: none;
+	width:200px;
+	height: 28px;
+	padding: 0;
+	margin:8px;
+	border-radius: 2px;
+}
+.submit-btn {
+	background-color: #5CB85C;
+	color: White;
+	font-weight: bold;
+}
+hr {
+	width: 200px;
+}
+
