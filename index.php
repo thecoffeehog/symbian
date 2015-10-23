@@ -44,5 +44,8 @@
 	            <a href="register.html"><button class="lead-cta">Register Now!</button></a>
 		</div>
 	</main>
+	<footer>
+		<p id="footermsg">Developed by <abbr title="Udit-Swapnil-Sharad-Rahul">USSR</abbr> with <3 at SIT</p>
+	</footer>
 </body>
 </html>

@@ -14,22 +14,20 @@
 		        <li><a href="index.php">Home</a></li>
 		        <li><a href="about.html">About</a></li>
 		     	<li><a href="contact-us.html">Contact</a></li>
-		    	<li><a href="login.html">Login</a></li>
+		     	<li><a href="logout.php">Logout</a></li>
 		    </ul>
 		</nav>
-	</header>	
+	</header>
+	<main>
 	<div class="main">
 		<div class="wrapper">
-			<div class="login-form-container">
-				<h2>Login Form</h2>
-				<form class="login-form" method="POST" action="login.php">
-					<input type="text" name="user_name" placeholder="Username" required autofocus><br>
-					<input type="password" name="password" placeholder="Password" required><br>
-					<input type="submit" value="Login" class="login-btn"><br>
-					  <h5 class="already-reg">Haven't registered? Click <a href="register.html">here</a> to register. <br>If you are a superuser, login <a href="superuserlogin.html">here.</a></h5>
-				</form>
+			<div class="buttons-container">
+				<?php //IF PREV ID ==1 echo <button>Add a superuser</button><br> ?>
+				<button>Add a event</button><br>
+				<button>Add a announcement</button><br>
 			</div>
 		</div> 
 	</div>	
+	</main>
 </body>
 </html>
