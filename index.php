@@ -45,7 +45,7 @@
 		</div>
 	</main>
 	<footer>
-		<p id="footermsg">Developed by <abbr title="Udit-Swapnil-Sharad-Rahul">USSR</abbr> with <3 at SIT</p>
+		<p id="footermsg">Developed by <abbr title="Udit-Swapnil-Sharad-Rahul">USSR</abbr></p>
 	</footer>
 </body>
 </html>

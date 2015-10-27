@@ -15,9 +15,11 @@
 	$sql = "SELECT * FROM superusers WHERE username = '$username' AND password = '$password'";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0) {	
+		$row = $result->fetch_assoc();
 		echo "Login Successful! ";
 		session_start();
 	    $_SESSION["suusername"] = $username;
+	    $_SESSION["PrivilegeID"] = $row["PrivilegeID"];
 		header('Location: superuserdashboard.php');
 	}
 	else

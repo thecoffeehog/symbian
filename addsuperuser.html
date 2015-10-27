@@ -6,34 +6,38 @@
 	<link href="css/form.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 	<header>
 		<nav class="navbar">
 		    <ul>
-		    <a href="index.php" id="header-link"><h2 id="header-logo"><abbr title="Symbiosis Insitute of Technology Alumni Network">Symbian</abbr></h2></a>
-		        <li><a href="index.php">Home</a></li>
-		        <li><a href="about.html">About</a></li>
-		     	<li><a href="contact-us.html">Contact</a></li>
-		    	<li><a href="login.html">Login</a></li>
+		    <a href="index.php" id="header-link"><h2 id="header-logo"><abbr title="Symbiosis Insitute of Technology Alu	mni Network">Symbian</abbr></h2></a>
+		        <li><a href="index.php">Home</a></li>			
+		    	<li><a href="logout.php">Logout</a></li>
 		    </ul>
 		</nav>
 	</header>
-	<main>
-		<div class="form-container">
-		<h2>Registration Form</h2>
+	<div class="main">
+		<div class="wrapper">
+			<div class="form-container">
+		<h2>Add User Form</h2>
 		<hr>
-			<form method="POST" action="register.php" class="form">
+			<form method="POST" action="addsuperuser.php" class="form">
 				<input type="text" name="first_name" placeholder="First Name" class="form-field-half">
 				<input type="text" name="last_name" placeholder="Last Name"class="form-field-half"><br>
 				<input type="text" name="user_name" placeholder="User Name"class="form-field-full"><br>
 				<input type="email" name="email" placeholder="Email Address"class="form-field-full"><br>
+				<select name="privilege" class="form-field-full">
+					<option value="1">Administrator</option>
+					<option value="2">Event Organiser</option>
+				</select><br>
 				<input type="password" name="password" placeholder="Password" class="form-field-half">
 				<input type="password" name="password_confirmation" placeholder="Confirm" class="form-field-half">
-				<input type="submit" value="Register" class="form-field-full submit">
+				<input type="submit"  name="superuser_submit" value="Add Super User" class="form-field-full submit" onclick="callphp()">
 			</form>
-			<hr>
-				<h6>Already Registered? Click <a href="login.html">here</a> to login.</h6>
+			<hr>	
 		</div>
-	</main>
+		</div>
+	</div>
 </body>
 </html>

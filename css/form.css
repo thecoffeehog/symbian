@@ -1,7 +1,7 @@
-.reg-form-container {
+.form-container {
 	margin: 10% 25%;
 }
-.reg-form-field-half {
+.form-field-half {
 	border: none;
 	width:200px;
 	height: 28px;
@@ -9,16 +9,25 @@
 	margin:8px;
 	border-radius: 2px;
 }
-.reg-form {
+.form {
 	width: 90%;
 }
 
-.reg-form-field-full {
+.form-field-full {
 	border: none;
 	width:420px;
 	height: 28px;
 	padding: 0;
 	margin:8px;
+	border-radius: 2px;
+}
+.form-field-textbox {
+	border: none;
+	width:420px;
+	height: 100px;
+	padding: 0;
+	margin:8px;
+	font-family: 'Raleway', sans-serif;
 	border-radius: 2px;
 }
 hr {

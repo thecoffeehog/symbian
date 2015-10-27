@@ -1,3 +1,23 @@
+<?php  
+	$servername = "localhost";
+	$dbusername = "root";
+	$dbpassword = "9374070589";
+	$dbname = "symbian";
+
+	$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+
+	// Check connection
+	if (!$conn) {
+	die("Connection failed: " . mysqli_connect_error());
+	}
+	session_start();	
+	if(isset($_SESSION['suusername']) && !empty($_SESSION['suusername'])) {
+	    $username = $_SESSION["suusername"];
+	    $userPrevID = $_SESSION["PrivilegeID"];
+	}
+	else 
+		header('Location: index.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +31,7 @@
 		<nav class="navbar">
 		    <ul>
 		    <a href="index.php" id="header-link"><h2 id="header-logo"><abbr title="Symbiosis Insitute of Technology Alumni Network">Symbian</abbr></h2></a>
-		        <li><a href="index.php">Home</a></li>
+		        <li><a href="superuserdashboard.php">Home</a></li>
 		        <li><a href="about.html">About</a></li>
 		     	<li><a href="contact-us.html">Contact</a></li>
 		     	<li><a href="logout.php">Logout</a></li>
@@ -22,8 +42,8 @@
 	<div class="main">
 		<div class="wrapper">
 			<div class="buttons-container">
-				<?php //IF PREV ID ==1 echo <button>Add a superuser</button><br> ?>
-				<button>Add a event</button><br>
+				<?php if($userPrevID==1) echo "<a href=\"addsuperuser.html\"><button>Add a superuser</button></a><br>" ?>
+				<a href="addevent.html"><button>Add a event</button></a><br>
 				<button>Add a announcement</button><br>
 			</div>
 		</div> 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SYMBIAN</title>
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/form.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar">
+		    <ul>
+		    <a href="index.php" id="header-link"><h2 id="header-logo"><abbr title="Symbiosis Insitute of Technology Alu	mni Network">Symbian</abbr></h2></a>
+		        <li><a href="index.php">Home</a></li>			
+		    	<li><a href="logout.php">Logout</a></li>
+		    </ul>
+		</nav>
+	</header>
+	<div class="main">
+		<div class="wrapper">
+			<div class="form-container">
+		<h2>Add Event</h2>
+		<hr>
+			<form method="POST" action="addevent.php" class="form">
+				<input type="text" name="eventid" placeholder="Event ID" class="form-field-full">
+				<input type="text" name="title" placeholder="Title" class="form-field-full">
+				<input type="text" name="startdate" placeholder="Start Date" class="form-field-half">
+				<input type="text" name="enddate" placeholder="End Date" class="form-field-half">
+				<input type="text" name="time" placeholder="Time" class="form-field-full"><br>
+				<textarea name="description"class="form-field-textbox">Event Description here...</textarea>
+				
+				<input type="submit"  name="superuser_submit" value="Add Event" class="form-field-full submit">
+			</form>
+			<hr>	
+		</div>
+		</div>
+	</div>
+</body>
+</html>
