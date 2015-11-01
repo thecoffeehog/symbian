@@ -12,8 +12,7 @@ if (!$conn) {
 }
 //To check whether a user with similar username or email id exists in the database
 
-$userCheckQuery = "SELECT * FROM superusers WHERE username = '$_POST[user_name]' OR email = '$_POST[email]' ";
-$userCheckResult = $conn->query($userCheckQuery);
+
 
 if($userCheckResult->num_rows > 0) {
 		echo "A user with similar email id/username exists in the database.<br>Please try registering with a different email id/username";

@@ -51,6 +51,33 @@
 	</header>
 	<div class="main">
 		<div class="wrapper">
+			<div class="upcoming-events">
+			<?php
+				$sql = "SELECT * FROM Events";
+				$result = $conn->query($sql);
+				if($result->num_rows == 0) {
+					echo "No Upcoming Events";
+				}
+				else {?>
+					<table border="0">
+					<caption><h3>Upcoming Events</h3></caption>
+						<tr>
+							<th>Event Name</th>
+							<th colspan="2">Attending?</th>
+						</tr>
+						<?php while ($row = $result->fetch_assoc()) {?>
+						<tr>
+				    		<?php echo "<td>".$row["Title"]."</td>";?>
+							<td id = "yes" value="1" onclick="updateRsvp('1')" rowspan="2">Yes</td>
+							<td id = "no" value="0" onclick="updateRsvp('0')" rowspan="2">No</td>
+						</tr>
+						<tr>
+							<?php echo "<td id=\"event-date\">".date("F j, Y",strtotime($row["StartDate"]))."</td>";?>
+						</tr>
+						<?php } }?>
+					</table>
+					
+			</div>
 		</div>
 	</div>
 </body>

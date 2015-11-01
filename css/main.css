@@ -75,7 +75,46 @@ p {
   background: #3cb0fd;
   text-decoration: none;
 }
-#footermsg {
+.upcoming-events {
+	background:rgba(255,255,255,0.5);
+	width: 350px;
+	height: 250px;
+	border-radius: 8px;
+	margin-top: 50px;
+	margin-left: 920px;
+	text-align: center;
+}
+h3 {
+	margin:10px;
+}
+table {
+	width: 350px;
+	height: 240	px;
+	margin-top: 50px;
+	float: center;	
+	text-align: center;
+}
+td {
+	padding: 5px;
+}	
+/*.upcoming-events>h3 {
+	text-align: center;
+}
+.upcoming-events>h4 {
+	display: inline;
+	margin: 40px;
+	text-decoration: underline;
+}
+.event-container>h5{
+	display: inline;
+	margin: 30px;
+	padding-top:25px;
+}
+
+.att_header {
+	text-align: right;
+}
+*/#footermsg {
 	text-align: center;
 	font-size: 15px;
 }
