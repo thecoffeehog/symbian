@@ -3,6 +3,7 @@
 	$dbusername = "root";
 	$dbpassword = "9374070589";
 	$dbname = "symbian";
+			$eventid = $_GET['eventid'];
 
 	$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
@@ -11,9 +12,20 @@
 	die("Connection failed: " . mysqli_connect_error());
 	}
 	session_start();	
-	if(isset($_SESSION['suusername']) && !empty($_SESSION['suusername'])) {
-	    $username = $_SESSION["suusername"];
-	    $userPrevID = $_SESSION["PrivilegeID"];
+	if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+		$susername = $_SESSION["username"];
+		$sql = "SELECT * FROM Events WHERE EventId=$eventid";
+		$result = $conn->query($sql);	
+		if($result->num_rows == 1) {	
+			$row = $result->fetch_assoc();
+			$eventTitle = $row['Title'];
+			$eventStartDate = $row['StartDate'];
+			$eventEndDate = $row['EndDate'];
+			$eventDescription = $row['Description'];
+		}
+		else {
+			echo 'Error in fetching data!';
+		}
 	}
 	else 
 		header('Location: index.php');
@@ -23,31 +35,29 @@
 <head>
 	<title>SYMBIAN</title>
 	<link href="css/main.css" rel="stylesheet">
-	<link href="css/login.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+	<link href="css/updateprofileconfirmation.css" rel="stylesheet">
 </head>
 <body>
 	<header>
 		<nav class="navbar">
 		    <ul>
 		    <a href="index.php" id="header-link"><h2 id="header-logo"><abbr title="Symbiosis Insitute of Technology Alumni Network">Symbian</abbr></h2></a>
-		        <li><a href="superuserdashboard.php">Home</a></li>
+		        <li><a href="index.php">Home</a></li>
 		        <li><a href="about.html">About</a></li>
 		     	<li><a href="contact-us.html">Contact</a></li>
-		     	<li><a href="logout.php">Logout</a></li>
+		    	<li><a href="logout.php">Logout</a></li>
 		    </ul>
 		</nav>
 	</header>
-	<main>
 	<div class="main">
 		<div class="wrapper">
-			<div class="buttons-container">
-				<?php if($userPrevID==1) echo "<a href=\"addsuperuser.html\"><button>Add a superuser</button></a><br>" ?>
-				<a href="addevent.html"><button>Add a event</button></a><br>
-				<a href="addannouncemnt.html"><button>Add a announcement</button></a><br>
+			<div class="updated-profile">
+			<h1><?php echo "$eventTitle";?></h1>
+			<h3>Start Date: <?php echo "$eventStartDate";?> &nbsp&nbsp&nbspEnd Date: <?php echo "$eventEndDate";?></h3>	
+			<p id="eventDescription"><?php echo "$eventDescription";?>
 			</div>
-		</div> 
-	</div>	
-	</main>
+		</div>
+	</div>
 </body>
 </html>

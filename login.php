@@ -10,6 +10,8 @@
 	if (!$conn) {
 	    die("Connection failed: " . mysqli_connect_error());
 	}
+	session_start();
+	
 	$username = $_POST['user_name'];
 	$password = $_POST['password'];
 	$sql = "SELECT * FROM registered WHERE username = '$username' AND password = '$password'";

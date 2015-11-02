@@ -14,8 +14,7 @@ if (!$conn) {
 session_start();	
 	if(isset($_SESSION['suusername']) && !empty($_SESSION['suusername'])) {
 		$suusername = $_SESSION["suusername"];
-		$sql = "INSERT INTO Events(EventID, Title, StartDate, EndDate, Time, Description, AddedBy,VenueID)
-				VALUES ($_POST[eventid], $_POST[title],$_POST[startdate],$_POST[enddate],'$_POST[time]','$_POST[description]','$suusername','1')";
+		$sql="INSERT INTO announcements(AID, ATitle, ADesc) VALUES ('$_POST[aid]','$_POST[title]','$_POST[description]')";
 	}
 	else 
 		header('Location: index.php');

@@ -12,12 +12,16 @@
 	}
 	session_start();
 	$susername = $_SESSION["username"];
-	$sql = "SELECT DPName FROM registered WHERE username = '$susername'";
+	$sql = "SELECT Firstname,Lastname,Email,Batch,DPName,status FROM registered WHERE Username = '$susername'";
 	$result = $conn->query($sql);
 	if($result->num_rows == 1) {	
 		$row = $result->fetch_assoc();
 		$imgname = $row['DPName'];
-	}
+		$firstname=$row['Firstname'];
+		$lastname=$row['Lastname'];
+		$email=$row['Email'];
+		$batch=$row['Batch'];
+	    $status=$row['status'];		}
 	else {
 		echo 'Error in fetching image!';
 	}
@@ -47,8 +51,19 @@
 		<div class="wrapper">
 			<div class="updated-profile">
 				<div class="dp">
-					<?php echo "<img src=\"dp/"."$imgname\"/>" ?> 
-					<p> DP Uploaded!</p>
+					<?php 
+					echo "<img src=\"dp/"."$imgname\"/>" ;
+					?> 
+					
+					<?php 
+					echo "<h3>Name: $firstname"."&nbsp&nbsp"."$lastname</h3>";
+									
+					echo "<h3>Email: $email</h3>";
+					
+					echo "<h3>Batch: $batch</h3>";
+
+					?> 
+					<p> Profile Updated!</p>
 					Click <a href="main.php">here</a> to go to the main page.	
 				</div>
 			</div>

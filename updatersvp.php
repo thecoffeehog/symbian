@@ -3,6 +3,7 @@
 	$dbusername = "root";
 	$dbpassword = "9374070589";
 	$dbname = "symbian";
+	$eventid = $_GET['eventid'];
 
 	$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 
